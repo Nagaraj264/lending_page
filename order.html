@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css">
+    <title>Order Awesome Smartphone</title>
+</head>
+<body>
+    <header>
+        <h1>Order Awesome Smartphone</h1>
+        <p>Fill in your details to place an order.</p>
+    </header>
+
+    <section class="order-form">
+        <form action="submit_order.php" method="post" onsubmit="return validateForm()">
+            <label for="name">Full Name:</label> <br>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label> <br>
+            <input type="email" id="email" name="email" required>
+
+            <label for="address">Shipping Address:</label> <br>
+            <textarea id="address" name="address" rows="4" required></textarea>
+
+            <label for="zip">Zip Code:</label> <br>
+            <input type="text" id="zip" name="zip" required>
+
+            <label for="quantity">Quantity:</label> <br>
+            <input type="number" id="quantity" name="quantity" min="1" required>
+            
+            <label for="payment">Payment Method:</label> <br>
+            <select id="payment" name="payment" required>
+                <option value="credit">Credit Card</option>
+                <option value="paypal">Paytm</option>
+                <option value="debit">Debit Card</option>
+                <!-- Add more payment options as needed -->
+            </select>
+
+            <label for="credit-card">Credit Card Number:</label> <br>
+            <input type="text" id="credit-card" name="credit-card" pattern="\d{16}" title="Enter a 16-digit credit card number" required>
+
+            <label for="price">Total Price:</label> <br>
+            <input type="text" id="price" name="price" readonly>
+
+            <button type="submit" class="order-button">Place Order</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Awesome Smartphone. All rights reserved.</p>
+    </footer>
+
+    
+</body>
+</html>
